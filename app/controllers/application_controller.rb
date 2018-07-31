@@ -8,9 +8,6 @@ class ApplicationController < ActionController::Base
   end
 
   def cart
-    if !session[:cart]
-      session[:cart] = []
-    end
-    session[:cart]
+     session[:cart] ||= []
   end
 end
